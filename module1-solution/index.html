@@ -8,6 +8,7 @@
     <script src="app.js"></script>
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
+      .warning { color: red; }
     </style>
   </head>
 <body ng-app='LunchCheck'>
@@ -23,9 +24,9 @@
          <div class="form-group">
             <button class="btn btn-default" ng-click="listFood();">Check If Too Much</button>
          </div>
-         <div class="form-group message">
+         <div ng-style="textStyle" class="form-group message">
            <!-- Your message can go here. -->
-           {{sendMessage()}}
+           {{sendMessage();}}
          </div>
    </div>
 

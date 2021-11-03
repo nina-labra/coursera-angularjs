@@ -8,6 +8,7 @@ LunchController.$inject = ['$scope'];
 function LunchController($scope){
     $scope.food = "";
     $scope.foodList = [];
+    $scope.textStyle = "";
 
     $scope.listFood = function () {
         let foodArr = $scope.food.split(' ');
@@ -17,11 +18,11 @@ function LunchController($scope){
 
     $scope.sendMessage = function () {
         if($scope.foodList.length > 3){
-            return "Too much food!"
+            return "Too much food!";
         }else if($scope.foodList.length > 0){
-            return "Enjoy!"
+            return "Enjoy!";
         }else{
-            return "You should eat something!"
+            return "";
         }
     }
 
